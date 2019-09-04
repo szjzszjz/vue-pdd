@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
@@ -9,5 +11,10 @@
 </script>
 
 <style scoped lang="stylus" ref="stylesheet/stylus">
+  .app{
+    width: 100%
+    height: 100%
+    background-color: #f5f5f5
+  }
 
 </style>
