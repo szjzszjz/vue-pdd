@@ -35,5 +35,5 @@ export default new Router({
       redirect: '/home'
     }
   ],
-  model: history
+  mode: 'history'
 })

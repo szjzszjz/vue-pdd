@@ -3,6 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import AlertView from './common/alert/index'
+import NotificationBar from './common/notification/index'
+import ShowFade from './common/fade/index'
+
+Vue.use(AlertView)
+Vue.use(NotificationBar)
+Vue.use(ShowFade)
 
 Vue.config.productionTip = false
 

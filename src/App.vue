@@ -1,12 +1,17 @@
 <template>
   <div class="app">
     <router-view></router-view>
+    <tab-bar></tab-bar>
   </div>
 </template>
 
 <script>
+  import TabBar from 'common/tabbar/TabBar'
   export default {
-    name: 'App'
+    name: 'App',
+    components: {
+      TabBar
+    }
   }
 </script>
 
