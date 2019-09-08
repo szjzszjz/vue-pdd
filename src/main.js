@@ -7,6 +7,12 @@ import AlertView from './common/alert/index'
 import NotificationBar from './common/notification/index'
 import ShowFade from './common/fade/index'
 
+// 第三方插件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import LyTab from 'ly-tab'
+Vue.use(VueAwesomeSwiper)
+Vue.use(LyTab)
+
 Vue.use(AlertView)
 Vue.use(NotificationBar)
 Vue.use(ShowFade)

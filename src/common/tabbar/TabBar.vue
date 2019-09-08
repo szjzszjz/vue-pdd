@@ -2,23 +2,23 @@
   <div class="bottom-bar">
     <div class="bar-item" @click="switchTo('/home')">
       <img :src="$route.path.includes('/home') ? this.images[0].select : this.images[0].normal" alt="">
-      <span :class="{on: '/home' === $route.path}">首页</span>
+      <span :class="{on: $route.path.includes('/home')}">首页</span>
     </div>
     <div class="bar-item" @click="switchTo('/recommend')">
       <img :src="$route.path.includes('/recommend') ? this.images[1].select : this.images[1].normal" alt="">
-      <span :class="{on: '/recommend' === $route.path}">推荐</span>
+      <span :class="{on: $route.path.includes('/recommend')}">推荐</span>
     </div>
     <div class="bar-item" @click="switchTo('/search')">
       <img :src="$route.path.includes('/search') ? this.images[0].select : this.images[2].normal" alt="">
-      <span :class="{on: '/search' === $route.path}">搜索</span>
+      <span :class="{on: $route.path.includes('/search')}">搜索</span>
     </div>
     <div class="bar-item" @click="switchTo('/chat')">
       <img :src="$route.path.includes('/chat') ? this.images[3].select : this.images[3].normal" alt="">
-      <span :class="{on: '/chat' === $route.path}">聊天</span>
+      <span :class="{on: $route.path.includes('/chat')}">聊天</span>
     </div>
     <div class="bar-item" @click="switchTo('/me')">
       <img :src="$route.path.includes('/me') ? this.images[4].select : this.images[4].normal" alt="">
-      <span :class="{on: '/me' === $route.path}">我的</span>
+      <span :class="{on: $route.path.includes('/me')}">我的</span>
     </div>
   </div>
 </template>
@@ -56,6 +56,11 @@
     methods: {
       switchTo(path) {
         console.log(this.$route.path, '--->', path)
+        this.$alert({
+          message: this.$route.path + '--->' + path,
+          closeTime: 3000
+
+        })
         this.$router.push(path)
       }
     }
@@ -90,7 +95,7 @@
   }
 
   .on {
-    color: red
+    color: #E12A1F
   }
 
 </style>
